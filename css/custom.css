@@ -242,14 +242,9 @@ div.modal-body img{
 @media(max-width:767px) {
     section {
         padding: 75px 0;
-        width: 123%;
     }
     header{
         margin-top: 50px;
-        width: 123%;
-    }
-    footer{
-        width: 123%;
     }
     section.first {
         padding-top: 75px;
