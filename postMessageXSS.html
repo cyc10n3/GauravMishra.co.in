@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+	    var popup = window.open('https://expedia.co.in');
+	    function post() { popup.postMessage({ "__cmpCall": function() { alert(popup.document.domain) }() }, "*") }
+	    setTimeout(post, 5000);
+    </script>
+</body>
+
+</html>
