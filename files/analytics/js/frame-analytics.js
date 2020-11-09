@@ -1,1 +1,1 @@
-window.alert(window.origin);
+window.parent.alert(window.origin);
