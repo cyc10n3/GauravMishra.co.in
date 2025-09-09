@@ -16,12 +16,7 @@
     const wsUrl = "wss://penny.payroll.amazon.dev/prod";
 
     // Try connecting
-    let ws = new WebSocket(wsUrl, [], {
-      headers: {
-        // In real browsers you can't set Cookie manually;
-        // if cookies are not HttpOnly + SameSite=strict, they will be auto-sent.
-      }
-    });
+    let ws = new WebSocket(wsUrl);
 
     ws.onopen = () => {
       log("[*] Connection opened");
@@ -41,12 +36,12 @@
       log("[*] Received: " + event.data);
     };
 
-    ws.onerror = (err) => {
-      log("[!] Error: " + JSON.stringify(err));
+    ws.onerror = (event) => {
+      log("[!] WebSocket error: " + JSON.stringify(event));
     };
 
-    ws.onclose = () => {
-      log("[*] Connection closed");
+    ws.onclose = (event) => {
+      log(`[!] Connection closed. Code: ${event.code}, Reason: ${event.reason}`);
     };
   </script>
 </body>
