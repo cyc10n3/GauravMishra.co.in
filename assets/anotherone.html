@@ -1,14 +1,12 @@
 <!doctype html>
 <html>
 <head>
-  <title>Expedia Auto Flow</title>
+  <title>Expedia XSS Demo</title>
 </head>
 <body>
-  <h3>Expedia Auto Flow Demo</h3>
-  <button id="start">Start Flow</button>
+  <h3>Stored XSS Demo - Expedia</h3>
 
   <script>
-    document.getElementById("start").onclick = () => {
       const testUrl = "https://www.expedia.com/web/home.aspx";
       console.log("Step 1: Opening Expedia...");
       const childWindow = window.open(testUrl, "_blank");
@@ -43,7 +41,6 @@
           window.location.href = testUrl;
         }, 5000);
       }, 5000);
-    };
   </script>
 </body>
 </html>
